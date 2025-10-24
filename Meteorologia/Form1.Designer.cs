@@ -55,6 +55,9 @@
             treeNode11,
             treeNode12,
             treeNode13});
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Temp Mìnima");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Temp Màxima");
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblfecha = new System.Windows.Forms.Label();
             this.stpseleccion = new System.Windows.Forms.StatusStrip();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -62,6 +65,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.trvprovincias = new System.Windows.Forms.TreeView();
             this.lsvtemperaturas = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lblfecha
@@ -152,12 +156,21 @@
             // 
             // lsvtemperaturas
             // 
+            this.lsvtemperaturas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
             this.lsvtemperaturas.HideSelection = false;
+            this.lsvtemperaturas.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2});
             this.lsvtemperaturas.Location = new System.Drawing.Point(378, 133);
             this.lsvtemperaturas.Name = "lsvtemperaturas";
-            this.lsvtemperaturas.Size = new System.Drawing.Size(253, 82);
+            this.lsvtemperaturas.Size = new System.Drawing.Size(220, 82);
             this.lsvtemperaturas.TabIndex = 8;
             this.lsvtemperaturas.UseCompatibleStateImageBehavior = false;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Temp Mìnima";
             // 
             // Form1
             // 
@@ -172,8 +185,9 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.stpseleccion);
             this.Controls.Add(this.lblfecha);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Inicio";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,6 +202,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TreeView trvprovincias;
         private System.Windows.Forms.ListView lsvtemperaturas;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }
 
